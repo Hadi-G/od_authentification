@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include ("./partials/navbar.ejs") %>
+    <div class="is-flex is-flex-direction-column is-justify-content-center">
+      <h1 class="title has-text-centered mt-6 pt-6">Incription</h1>
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="box mx-6 px-6">
+            <form id="subscribe_form">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" id="first_name" type="text" placeholder="Prénom" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" id="last_name" type="text" placeholder="Nom de famille" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" id="second_email" type="email" placeholder="Email" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" id="first_password" type="password" placeholder="Mot de passe" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" id="confirm_password" type="password" placeholder="Confirmer le mot de passe" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <p class="help has-text-info is-size-6 pb-6">Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un chiffre et un caractère spécial.</p>
+              <p id="second_error_message" class="subtitle has-text-danger"></p>
+              <div class="field">
+                <p class="control">
+                  <input type="submit" class="button is-success" value="login">
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/subscribe.js" async defer></script>
+  </body>
+</html>
